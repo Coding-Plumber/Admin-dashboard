@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.5fr 5fr;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar projects";
+  }
+
+  .header {
+    background-color: white;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 3fr 1.9fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-areas: 
+    "search notifications"
+    "logo buttons";
+  }
+
+.search-form {
+    grid-area: search;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin-right: 40px;
+  border-radius: 10px;
+  background-color: lightblue;
+}
+
+.mag-glass {
+  height: 2vh;
+  width: auto;
+  margin-right: 10px;
+}
+
+
+.header-buttons {
+    grid-area: buttons;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 50px;
+}
+
+.header-buttons button {
+    width: 30%;
+    height: 20%;
+    border-radius: 15px;
+}
+
+.logo-section {
+  grid-area: logo;
+  display: flex;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-logo {
+  height: 150px;
+  width: auto;
+  display: flex;
+
+}
+
+.notification {
+    grid-area: notifications;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+    margin-left: 20px;
+}
+
+.company-text {
+  font-size: 30px;
+}
+.bell {
+  height: auto;
+  width: 3vw;
+}
+
+.heating-logo {
+  height:100px;
+  width: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  height: 5vh;
+  width: 5vh;
+  margin-top: 15px;
+  margin-left: 3vw;
+}
+
+.dashboard-header h1 {
+  display: flex;
+  align-items: center;
+  color:white;
+  margin-left: 1vw;
+}
+
+.sidebar {
+  background-color: #bada55;
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.sidebar-settings {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15vh;
+  margin-left: 3vw;
+}
+
+.sidebar-buttons {
+  margin-top: 15vh;
+  margin-left: 3vw;
+}
+
+.projects {
+  grid-area: projects;
+  background-color: aquamarine;
+}
+
+.dashboard-icon {
+  width: 2em;
+  height: auto;
+}
+
+.dashboard-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1vh;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: 
+  "projects projects announcements"
+  "projects projects announcements"
+  "projects projects trending";
+}
+
+.project-container {
+  grid-column: 1 / 2;
+  grid-row: 1/2;
+}
+
+.announcement-container {
+  grid-area: announcements;
+}
+
+.trending {
+  grid-area: trending;
+}
